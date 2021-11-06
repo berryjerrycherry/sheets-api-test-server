@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "name": "sheets-api-test-server",
+  "description": "Server for Google Sheets API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/65-7a/sheets-api-test-server.git"
+  },
+  "author": "Callum Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/65-7a/sheets-api-test-server/issues"
+  },
+  "homepage": "https://github.com/65-7a/sheets-api-test-server#readme"
 }
