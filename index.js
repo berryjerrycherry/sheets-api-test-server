@@ -20,8 +20,6 @@ const port = 3000;
 app.listen(port, () => {
  console.log(`Server running on port ${port}`);
  app.get("/spreadsheet", (req, res, next) => {
-    const sheetId = "1_Ypmmq_mror0gBjxXqguNtd0rgQbJDMdjpK_BeZ4XQs"
-    const key = "AIzaSyBACq3bX9dEQP0gCjDI3gOq3Fh6d5S_zu8";
     https.get(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1?key=${key}`, (resp) => {
         let data = '';
 
