@@ -12,7 +12,6 @@
 
 const express = require("express");
 const https = require('https');
-const { sheetId, key } = require("./config.json");
 
 const app = express();
 const port = 3000;
@@ -20,6 +19,8 @@ const port = 3000;
 app.listen(port, () => {
  console.log(`Server running on port ${port}`);
  app.get("/spreadsheet", (req, res, next) => {
+    const sheetId = process.env.sheetId;
+    const key = process.env.key;
     https.get(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1?key=${key}`, (resp) => {
         let data = '';
 
