@@ -14,7 +14,7 @@ const express = require("express");
 const https = require('https');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.listen(port, () => {
  console.log(`Server running on port ${port}`);
