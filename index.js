@@ -16,6 +16,15 @@ const https = require('https');
 const app = express();
 const port = process.env.PORT;
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    next();
+});
+
 app.listen(port, () => {
  console.log(`Server running on port ${port}`);
  app.get("/spreadsheet", (req, res, next) => {
