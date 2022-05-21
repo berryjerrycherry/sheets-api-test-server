@@ -14,7 +14,7 @@ const express = require("express");
 const https = require('https');
 
 const app = express();
-const port = process.env.PORT;
+const port = 69
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
