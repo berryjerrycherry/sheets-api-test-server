@@ -14,7 +14,7 @@ const express = require("express");
 const https = require('https');
 
 const app = express();
-const port = 69
+const port = 8080;
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
